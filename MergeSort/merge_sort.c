@@ -27,23 +27,23 @@ void merge(int *nums, int numsSize) {
 			j++;
 		}
 	}
+
 	while (i < numsSize / 2) {
-        nums[k] = a[i];
-        i++;
-        k++;
-    }
+		nums[k] = a[i];
+		i++;
+		k++;
+	}
 
-    while (j < numsSize - (numsSize / 2)) {
-        nums[k] = b[j];
-        j++;
-        k++;
-    }
-
+	while (j < numsSize - (numsSize / 2)) {
+		nums[k] = b[j];
+		j++;
+		k++;
+	}
 }
 
 void mergeSort(int *nums, int numsSize) {
 	if (numsSize - 1 > 0) {
-    	int m = numsSize / 2;
+		int m = numsSize / 2;
 
 		mergeSort(nums, m);
 		mergeSort(nums + m, numsSize - m);
