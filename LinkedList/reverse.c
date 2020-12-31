@@ -10,8 +10,8 @@ struct Node reverseLikedList(struct Node *linkedList) {
 	struct Node *node = head;
 	struct Node *previous = NULL;
 	struct Node *nextGuy;
-    
-    if (!node) return (node);
+
+	if (!node) return (node);
 
 	while (node->next) {
 		//b | c
@@ -23,6 +23,6 @@ struct Node reverseLikedList(struct Node *linkedList) {
 		//b | c
 		node = nextGuy;
 	}
-    node->next = previous;
-    return(node);
+	node->next = previous;
+	return(node);
 }
