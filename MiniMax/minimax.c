@@ -68,7 +68,7 @@ int minimax(char board[3][3], int depth, bool isMax)
 	if (score == 10)
 		return score;
 
-	f (score == -10)
+	if (score == -10)
 		return score;
 
 	if (isMovesLeft(board)==false)
