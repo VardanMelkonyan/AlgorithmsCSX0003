@@ -12,6 +12,9 @@ int		move(char move[3], int turn, char state[3][3], int winTable[3][3]);
 int		checkWinner(int winTable[3][3]);
 char	*findBestMove(char board[3][3]);
 
+char	xWonText[] = " /$$   /$$                                         /$$\n| $$  / $$                                        | $$\n|  $$/ $$/       /$$  /$$  /$$  /$$$$$$  /$$$$$$$ | $$\n\\  $$$$/       | $$ | $$ | $$ /$$__  $$| $$__  $$| $$\n>$$  $$       | $$ | $$ | $$| $$  \\ $$| $$  \\ $$|__/\n/$$/\\  $$      | $$ | $$ | $$| $$  | $$| $$  | $$    \n| $$  \\ $$      |  $$$$$/$$$$/|  $$$$$$/| $$  | $$ /$$\n|__/  |__/       \\_____/\\___/  \\______/ |__/  |__/|__/\n";
+
+char	oWonText[] = "  /$$$$$$                                          /$$\n /$$__  $$                                        | $$\n| $$  \\ $$       /$$  /$$  /$$  /$$$$$$  /$$$$$$$ | $$\n| $$  | $$      | $$ | $$ | $$ /$$__  $$| $$__  $$| $$\n| $$  | $$      | $$ | $$ | $$| $$  \\ $$| $$  \\ $$|__/\n| $$  | $$      | $$ | $$ | $$| $$  | $$| $$  | $$    \n|  $$$$$$/      |  $$$$$/$$$$/|  $$$$$$/| $$  | $$ /$$\n\\______/        \\_____/\\___/  \\______/ |__/  |__/|__/\n";
 
 int 	main(int ac, char **av) {
 	char	state[3][3];
@@ -35,11 +38,11 @@ int 	main(int ac, char **av) {
 			if (steps > 4) {
 				winner = checkWinner(winTable);
 				if (winner == 1) {
-					ft_putstr("O Won!!!\n");
+					ft_putstr(oWonText);
 					return (0);
 				}
 				if (winner == -1) {		
-					ft_putstr("X Won!!!\n");
+					ft_putstr(xWonText);
 					return (0);
 				}
 			}
@@ -67,11 +70,11 @@ int 	main(int ac, char **av) {
 			if (steps > 4) {
 				winner = checkWinner(winTable);
 				if (winner == 1) {
-					ft_putstr("O Won!!!\n");
+					ft_putstr(oWonText);
 					return (0);
 				}
 				if (winner == -1) {		
-					ft_putstr("X Won!!!\n");
+					ft_putstr(xWonText);
 					return (0);
 				}
 			}
